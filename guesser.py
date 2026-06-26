@@ -5,7 +5,10 @@ import random
 secret_number = random.randint(1, 100)
 attempts = 0
 while True:
-    choosen_number = int(input("Please young one enter the number think: "))
+    try:
+        choosen_number = int(input("Please young one enter the number think: "))
+    except ValueError:
+        print("Please enter a number dip shit")
     attempts += 1
     if choosen_number > secret_number:
         print("too high")
